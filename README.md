@@ -1,6 +1,6 @@
 # Sample Bash Scripts Repository
 
-This repository contains a collection of sample bash scripts designed to automate common administrative and security tasks. Each script is tailored for specific purposes, making it a great reference for learning or improving bash scripting skills.
+This repository contains a collection of sample bash scripts designed to automate common administrative and security tasks. Each script is tailored for specific purposes.
 
 ---
 
