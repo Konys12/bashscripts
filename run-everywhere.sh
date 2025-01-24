@@ -28,7 +28,7 @@ fi
 while getopts fnsv OPTION
 do
   case ${OPTION} in
-    f) FILE_SPECIFIED="${OPTARG}" ;;
+    f) FILE="${OPTARG}" ;;
     n) DRY_RUN='true' ;;
     s) SUDO='sudo' ;;
     v) VERBOSE='true' ;;
