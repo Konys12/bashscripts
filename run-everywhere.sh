@@ -6,6 +6,9 @@ FILE='/vagrant/servers'
 # Options for the ssh command.
 SSH_OPTIONS='-o ConnectTimeout=2'
 
+# Initialize the exit status.
+EXIT_STATUS=0
+
 usage() {
   echo "Usage: ./run-everywhere.sh [-nsv] [-f FILE] COMMAND" >&2
   echo "Executes COMMAND as a single command on every server." >&2
@@ -63,7 +66,7 @@ do
     echo "${SERVER}"
   fi
 
-  SSH_COMMAND="ssh ${SSH_OPTIONS} ${SERVER} ${SUDO} ${COMMAND}"
+  SSH_COMMAND="ssh ${SSH_OPTIONS} ${SERVER} ${SUDO} \"${COMMAND}\""
   # If it's a dry run, don't execute anything, just echo it.
   if [[ "${DRY_RUN}" = 'true' ]]
   then
