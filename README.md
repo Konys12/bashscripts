@@ -57,5 +57,7 @@ This repository contains a collection of sample bash scripts designed to automat
         -v: Enable verbose mode, displaying the server name for each command.
   - Must be executed without superuser privileges; use -s for remote sudo commands.
   - Notifies the user if the command fails on any remote host.
+- **Requirement**:
+  - This script assumes working SSH connection exists between the machine executing the script and the target servers.
 
 
