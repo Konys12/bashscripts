@@ -60,4 +60,23 @@ This repository contains a collection of sample bash scripts designed to automat
 - **Requirement**:
   - This script assumes working SSH connection exists between the machine executing the script and the target servers.
 
+---
+
+### 5. `deploy-ecommerce-application.sh`
+- **Purpose**: Install ecommerce learning application
+- **Details**:
+  - Installs the e-commerce learning application on a LAMP stack.
+  - The application web page should be accessible at http://localhost.
+  - Installs and configures `firewalld`, `mariadb`, and `httpd`, and checks if they are active after installation.
+  - Creates an `.env` file with database connection settings (`DB_HOST`, `DB_USER`, etc.) for the e-commerce web application.
+  - Adds firewall rules to allow MariaDB (3306/tcp) and HTTP (80/tcp) traffic, and verifies they are correctly configured.
+  - Creates a database (`ecomdb`) and a user (`ecomuser`) with the required permissions, then loads sample inventory data into the `products` table.
+  - Verifies if inventory data (e.g., "Laptop") is successfully loaded into the database. The script exits if not.
+  - Clones the `learning-app-ecommerce` repository from GitHub into the web server's document root (`/var/www/html`).
+  - Uses `curl` to fetch the web page and checks if certain items (e.g., "Laptop", "Drone", "VR", "Watch") are present on the page.
+- **Requirement**:
+  - This script expects to work on CentOS machine
+- ** Note **;
+  - ecommerce learning application source code was created by Kodekloud academy for education purposses. 
+
 
